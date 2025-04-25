@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>لعبة ماريو التعليمية</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="mainMenu">
+    <h1>لعبة القفز</h1>
+    <button onclick="startGame()">ابدأ اللعبة</button>
+    <p>أفضل نتيجة: <span id="highScore">0</span></p>
+  </div>
+
+  <div id="gameContainer" style="display:none;">
+    <div id="score">النتيجة: 0</div>
+    <div id="game">
+      <img id="player" src="character.png" />
+      <div class="platform" style="bottom: 100px; left: 50px;"></div>
+      <div class="platform" style="bottom: 200px; left: 200px;"></div>
+      <div class="platform" style="bottom: 300px; left: 400px;"></div>
+      <div class="coin" style="bottom: 330px; left: 420px;"></div>
+      <div class="coin" style="bottom: 230px; left: 220px;"></div>
+    </div>
+    <div id="controls">
+      <button id="left">◀</button>
+      <button id="up">▲</button>
+      <button id="right">▶</button>
+    </div>
+  </div>
+
+  <div id="gameOverScreen" style="display:none;">
+    <h2>انتهت اللعبة!</h2>
+    <p>النتيجة: <span id="finalScore">0</span></p>
+    <button onclick="restartGame()">ابدأ من جديد</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
